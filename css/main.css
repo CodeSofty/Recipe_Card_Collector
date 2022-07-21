@@ -1,0 +1,107 @@
+/* Main CSS Styles */
+
+html {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+body {
+    margin-bottom: 6rem;
+}
+
+
+
+/* Override BootStrap Styles */
+
+.primary-title {
+    font-family: 'Playfair Display', serif;
+}
+
+.jumbotron {
+    position: relative;
+    background-size: cover;
+    color: white;
+    height: 65vh;
+    text-align: center;
+}
+
+.table_container {
+    position: absolute;
+    margin: auto;
+    bottom: 20;
+    left: 0;
+    right: 0;
+    width: 60%;
+    color: #000;
+
+    background-color: white;
+}
+
+
+/* Nav Styles */
+
+.navigation { 
+    justify-content: space-around;
+    background-color: #e4e6eb;
+}
+
+.nav-icon::before {
+    color: #3BC190;
+}
+
+
+
+/* Recipe Card Styles */
+
+
+.card-body {
+    position: relative;
+} 
+
+.card-title {
+    font-weight: 400;
+}
+
+.card-img-top {
+    width: 100%;
+}
+
+
+.title-box {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.btn-edit {
+    position: absolute;
+    top: 5px;
+    right: 25px;
+    background-color: transparent;
+    display: block;
+
+}
+
+
+.delete-button {
+    position: absolute;
+    bottom: 30px;
+    right: 25px;
+    background-color: transparent;
+}
+
+.dots-icon {
+    cursor: pointer;
+}
+
+
+/* Class To Toggle Display With JavaScript */
+
+.hide {
+    display:none;
+}
+
+
+.read-single-right-col {
+    text-align: center;
+}
