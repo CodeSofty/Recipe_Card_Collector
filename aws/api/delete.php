@@ -16,8 +16,8 @@ try {
         'region' => 'us-east-2',
         'version' => 'latest',
         'credentials' => array (
-            'key' => getenv('AWS_ACCESS_KEY_ID'),
-            'secret' => getenv('AWS_SECRET_ACCESS_KEY'),
+            'key' => getenv['AWS_ACCESS_KEY_ID'],
+            'secret' => getenv['AWS_SECRET_ACCESS_KEY'],
     ),
     ];
 
