@@ -6,9 +6,8 @@ error_reporting(E_ALL);
 require ('vendor/autoload.php');
 use Aws\S3\S3Client;  
 use Aws\S3\Exception\AwsS3Exception;
-// Load environmental variables from directory
-$dotenv = Dotenv\Dotenv::createImmutable(dirname(dirname(__DIR__)));
-$dotenv->load();
+
+
 $aws_url = filter_input(INPUT_POST, 'aws_url', FILTER_SANITIZE_STRING);
 if (!$aws_url){
     $aws_url = filter_input(INPUT_GET, 'aws_url', FILTER_SANITIZE_STRING);
