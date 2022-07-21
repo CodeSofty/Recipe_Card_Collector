@@ -1,8 +1,6 @@
 <?php 
 
 
-mysql://b8aa0663acecb1:a7faeb32@us-cdbr-east-06.cleardb.net/heroku_ae9138c33b4413d?reconnect=true
-
 class Database {
     //DB Params
     private $host = 'us-cdbr-east-06.cleardb.net';
