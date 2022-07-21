@@ -1,11 +1,16 @@
 <?php 
 
+
+mysql://b8aa0663acecb1:a7faeb32@us-cdbr-east-06.cleardb.net/heroku_ae9138c33b4413d?reconnect=true
+
 class Database {
     //DB Params
-    private $host = 'localhost';
-    private $db_name = 'recipecrud';
-    private $username = 'root';
+    private $host = 'us-cdbr-east-06.cleardb.net';
+    private $db_name = 'heroku_ae9138c33b4413d';
+    private $username = 'b8aa0663acecb1';
+    private $pass =  'a7faeb32';
     private $conn;
+    
 
     //DB Connect
     public function connect()
@@ -15,7 +20,7 @@ class Database {
         try
     {
         $this->conn = new PDO('mysql:host=' . $this->host . ';dbname=' . $this->db_name,
-        $this->username);
+        $this->username, $this->pass);
         $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
         catch(PDOException $e)
