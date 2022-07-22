@@ -68,7 +68,9 @@ $s3Client = $sdk->createS3();
         'Bucket' => "crudappbucket",
         'Body'   => "this is the body!",
         'Key' =>  $file_name,
-        'SourceFile' => 'images/'.$file_name,
+        'SourceFile' => __DIR__ . "/images/".$file_name,
+
+        
     ]);
 // Echo Any Error Messages
 } catch (S3Exception $e) {
