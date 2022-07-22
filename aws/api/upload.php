@@ -33,7 +33,7 @@ if (isset($_FILES) ){
     if(empty($message) == true) {
         // move_uploaded_file($file_tmp, "/app/images/".$file_new_name);
                 // Upload the file to the bucket
-                uploadFiletoS3($file_new_name);
+                uploadFiletoS3($file_name);
         echo "Congratulations Image Uploaded Successfully";
         header("Location: .?action=show_recipes");
 
