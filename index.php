@@ -1,5 +1,7 @@
 <?php
 
+ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_reporting(E_ALL);
+
 //Require Models (database, API, and class files)
 require_once('config/database.php');
 require('model/recipe_db.php');
