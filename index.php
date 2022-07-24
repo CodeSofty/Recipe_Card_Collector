@@ -16,7 +16,6 @@ $db = $database->connect();
 // Create a New Recipe Object
 $recipes = new Recipe($db);
 
-echo '<script>alert($file_name)</script>';
 
 // Get and Store Parameters in Variables for Create, Read, and Delete Operations
 $title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_STRING);
@@ -212,6 +211,7 @@ switch($action) {
     default:
         $recipes = $recipes->read();
         include('view/recipe_list.php');
+        echo '<script>alert($file_name)</script>';
 }
 
 ?>
