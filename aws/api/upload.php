@@ -32,7 +32,7 @@ if (isset($_FILES) ){
     // If no Errors exist, move the file to the images directory
     if(empty($message) == true) {
         move_uploaded_file($file_tmp, __DIR__ ."aws/api/images/".$file_new_name);
-        echo __DIR__ ."aws/api/images/".$file_new_name;
+        echo "/images/".$file_new_name;
                 // Upload the file to the bucket
                 uploadFiletoS3($file_new_name);
         echo "Congratulations Image Uploaded Successfully";
