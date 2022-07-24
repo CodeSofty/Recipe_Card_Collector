@@ -211,7 +211,6 @@ switch($action) {
     default:
         $recipes = $recipes->read();
         include('view/recipe_list.php');
-        echo '<script>alert($file_name)</script>';
 }
 
 ?>
