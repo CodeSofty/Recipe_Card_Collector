@@ -1,8 +1,7 @@
 <?php
 
 ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_reporting(E_ALL);
-echo $file_name . 'this is on index';
-echo $file_new_name . 'this is also on index ';
+
 
 //Require Models (database, API, and class files)
 require_once('config/database.php');
