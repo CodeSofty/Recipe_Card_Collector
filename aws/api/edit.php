@@ -21,7 +21,7 @@ $previous_file_name = end($explode_url);
 // Get file upload details 
 
 // Tests if file name is in the image directory
-if(isset($_FILES) && is_file(__DIR__ . "/images/".$previous_file_name)) {
+if(isset($_FILES)) {
     $file_name = $_FILES['image']['name'];
     $file_size = $_FILES['image']['size'];
     $file_tmp = $_FILES['image']['tmp_name'];
