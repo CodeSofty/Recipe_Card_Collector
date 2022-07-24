@@ -38,7 +38,7 @@ if(isset($_FILES) && is_file(__DIR__ . "/images/".$previous_file_name)) {
     }
     // If no Errors exist, move the file to the images directory
     if(empty($errors) == true) {
-        move_uploaded_file($file_tmp, __DIR__ . "images/".$file_new_name);
+        move_uploaded_file($file_tmp, __DIR__ . "/images/".$file_new_name);
                 // Upload the file to the bucket
                 echo __DIR__ . "images/";
                 updateFiletoS3($file_new_name);
@@ -81,7 +81,7 @@ $s3Client = $sdk->createS3();
         'Bucket' => "crudappbucket",
         'Body'   => "this is the body!",
         'Key' =>  $file_name,
-        'SourceFile' =>  __DIR__ .'images/'.$file_name,
+        'SourceFile' =>  __DIR__ .'/images/'.$file_name,
     ]);
 // Echo Any Error Messages
 } catch (S3Exception $e) {
