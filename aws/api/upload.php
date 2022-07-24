@@ -33,7 +33,7 @@ if (isset($_FILES) ){
     if(empty($message) == true) {
         move_uploaded_file($file_tmp, __DIR__ ."aws/api/images/".$file_new_name);
                 // Upload the file to the bucket
-                echo '<script>alert(`$file_new_name`)</script>';
+                echo '<script>alert($file_new_name)</script>';
                 uploadFiletoS3($file_new_name);
         echo "Congratulations Image Uploaded Successfully";
         header("Location: .?action=show_recipes");
@@ -46,6 +46,7 @@ function uploadFiletoS3($file_name){
 
     if(isset($file_name)) {
 
+        echo '<script>alert($file_name)</script>';
 // Shared S3 Configuration
 try {
     $sharedConfig = [
