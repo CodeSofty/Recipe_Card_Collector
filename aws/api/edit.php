@@ -21,7 +21,7 @@ $previous_file_name = end($explode_url);
 // Get file upload details 
 
 // Tests if file name is in the image directory
-if(isset($_FILES) && is_file(__DIR__ . "/images/".$previous_file_name)) {
+if(isset($_FILES)) {
     $file_name = $_FILES['image']['name'];
     $file_size = $_FILES['image']['size'];
     $file_tmp = $_FILES['image']['tmp_name'];
@@ -40,7 +40,7 @@ if(isset($_FILES) && is_file(__DIR__ . "/images/".$previous_file_name)) {
     if(empty($errors) == true) {
         move_uploaded_file($file_tmp, __DIR__ . "/images/".$file_new_name);
                 // Upload the file to the bucket
-                echo __DIR__ . "images/";
+                echo __DIR__ . "/images/";
                 updateFiletoS3($file_new_name);
                 echo "<script type='text/javascript'>alert('$file_new_name');</script>"; 
         echo "Image Edited Successfully";
