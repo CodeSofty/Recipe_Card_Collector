@@ -15,8 +15,6 @@ $db = $database->connect();
 // Create a New Recipe Object
 $recipes = new Recipe($db);
 
-
-
 // Get and Store Parameters in Variables for Create, Read, and Delete Operations
 $title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_STRING);
 if (!$title){
