@@ -3,8 +3,6 @@
 ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_reporting(E_ALL);
 ?>
 
-<?php ob_start();?>
-
 <?php
 
 //Require Models (database, API, and class files)
@@ -220,4 +218,3 @@ switch($action) {
 
 ?>
 
-<?php ob_clean();?>
