@@ -213,4 +213,3 @@ switch($action) {
         include('view/recipe_list.php');
 }
 ?>
-
