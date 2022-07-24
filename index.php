@@ -219,4 +219,4 @@ switch($action) {
 ?>
 
 
-<?php ob_end_clean();?>
+<?php ob_end_flush();?>
