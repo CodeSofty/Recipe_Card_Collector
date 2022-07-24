@@ -9,7 +9,6 @@ function deleteFileFromS3($aws_url){
     $url = $aws_url;
     $explode_url = explode('/', $url);
     $img_to_be_deleted = end($explode_url);
-    echo "<script type='text/javascript'>alert('$img_to_be_deleted');</script>";
 // Shared S3 Configuration
 try {
     $sharedConfig = [

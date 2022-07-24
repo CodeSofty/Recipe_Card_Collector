@@ -1,4 +1,7 @@
+<?php ob_start(); ?>
+
 <?php
+
 
 ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_reporting(E_ALL);
 
@@ -214,3 +217,6 @@ switch($action) {
 }
 
 ?>
+
+
+<?php ob_end_clean();?>
