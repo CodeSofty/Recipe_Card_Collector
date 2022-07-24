@@ -31,7 +31,6 @@ if (isset($_FILES) ){
     }
     // If no Errors exist, move the file to the images directory
     if(empty($message) == true) {
-        echo $file_new_name;
         move_uploaded_file($file_tmp, __DIR__ ."aws/api/images/".$file_new_name);
                 // Upload the file to the bucket
                 uploadFiletoS3($file_new_name);
@@ -45,7 +44,6 @@ if (isset($_FILES) ){
 function uploadFiletoS3($file_name){ 
 
     if(isset($file_name)) {
-        echo $file_name;
 
 // Shared S3 Configuration
 // try {

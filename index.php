@@ -1,6 +1,6 @@
 <?php
 
-// ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_reporting(E_ALL);
+ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_reporting(E_ALL);
 
 //Require Models (database, API, and class files)
 require_once('config/database.php');
@@ -16,9 +16,6 @@ $db = $database->connect();
 $recipes = new Recipe($db);
 
 
-echo $file_name;
-
-echo $file_new_name;
 
 // Get and Store Parameters in Variables for Create, Read, and Delete Operations
 $title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_STRING);
