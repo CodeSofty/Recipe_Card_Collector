@@ -1,8 +1,11 @@
 <?php
 
-
 ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_reporting(E_ALL);
+?>
 
+<?php ob_start();?>
+
+<?php
 
 //Require Models (database, API, and class files)
 require_once('config/database.php');
@@ -214,4 +217,7 @@ switch($action) {
         include('view/recipe_list.php');
 }
 
+
 ?>
+
+<?php ob_clean();?>
