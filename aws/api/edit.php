@@ -40,6 +40,7 @@ if(isset($_FILES) && is_file("images/".$previous_file_name)) {
     if(empty($errors) == true) {
         move_uploaded_file($file_tmp, "images/".$file_new_name);
                 // Upload the file to the bucket
+                echo __DIR__ . 'images/' . $file_name;
                 updateFiletoS3($file_new_name);
                 echo "<script type='text/javascript'>alert('$file_new_name');</script>"; 
         echo "Image Edited Successfully";
