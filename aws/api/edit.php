@@ -14,6 +14,7 @@ if (!$aws_url){
 };
 
 $url = $aws_url;
+echo $url;
 $explode_url = explode('/', $url);
 $previous_file_name = end($explode_url);
 
