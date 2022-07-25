@@ -13,7 +13,6 @@ A CRUD app for users to upload their own recipes and images, with its own API to
 - MySQL
 - An AWS S3 Bucket (for image storage)
 - Bootstrap
-- Hosted on Heroku
 
 ## What Did You Learn?
 
