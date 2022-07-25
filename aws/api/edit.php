@@ -58,6 +58,7 @@ if(isset($_FILES)) {
 function updateFiletoS3($file_name){ 
 
     if(isset($file_name)) {
+        echo "<script type='text/javascript'>alert('This File is before updating');</script>"; 
         uploadFiletoS3($file_name);
 
 // // Shared S3 Configuration
