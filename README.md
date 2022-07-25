@@ -77,7 +77,7 @@ This page display a single recipe's information
 - Users can UPDATE when a recipe is updated by clicking on the 3 dots on a recipe card, and then clicking on the pencil symbol, which brings up the form and image data to update.
 - Users can DELETE when a recipe is deleted by clicking on the 3 dots on a recipe card, and then clicking on the trash can symbol, which removes the data from the database, and image in the AWS S3 Bucket.
 
-## * Room For Improvement:
+##  Room For Improvement:
 
 - One known features of AWS is that it will override a file if the same name is used.
 - To avoid this, a unique ID is created in a hidden input field using timestamps when a user uploads a file.
