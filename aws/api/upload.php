@@ -46,7 +46,7 @@ function uploadFiletoS3($file_name){
 
     if(isset($file_name)) {
 
-        echo "<script type='text/javascript'>alert('This before uploading');</script>"; 
+        echo "<script type='text/javascript'>alert($_FILES $file_new_name $file_name);</script>"; 
 // Shared S3 Configuration
 try {
     $sharedConfig = [
