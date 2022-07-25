@@ -46,6 +46,8 @@ function uploadFiletoS3($file_name){
 
     if(isset($file_name)) {
 
+        echo __DIR__ . "/images/".$file_name;
+
 // Shared S3 Configuration
 try {
     $sharedConfig = [
