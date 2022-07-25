@@ -57,36 +57,36 @@ if(isset($_FILES)) {
 function updateFiletoS3($file_name){ 
 
     if(isset($file_name)) {
+        uploadFiletoS3($file_name);
+
+// // Shared S3 Configuration
+// try {
+//     $sharedConfig = [
+//         'region' => 'us-east-2',
+//         'version' => 'latest',
+//         'credentials' => array (
+//             'key' => $_ENV['AWS_ACCESS_KEY_ID'],
+//             'secret' => $_ENV['AWS_SECRET_ACCESS_KEY'],
+//     ),
+//     ];
+
+// // Give the SDK the configuration for connection
+// $sdk = new Aws\Sdk($sharedConfig);
+// // Create an S3 Client
+// $s3Client = $sdk->createS3();
 
 
-// Shared S3 Configuration
-try {
-    $sharedConfig = [
-        'region' => 'us-east-2',
-        'version' => 'latest',
-        'credentials' => array (
-            'key' => $_ENV['AWS_ACCESS_KEY_ID'],
-            'secret' => $_ENV['AWS_SECRET_ACCESS_KEY'],
-    ),
-    ];
-
-// Give the SDK the configuration for connection
-$sdk = new Aws\Sdk($sharedConfig);
-// Create an S3 Client
-$s3Client = $sdk->createS3();
-
-
-// Use S3 client to upload image stored in images folder to the S3 Bucket
-    $result = $s3Client->putObject([
-        'Bucket' => "crudappbucket",
-        'Body'   => "this is the body!",
-        'Key' =>  $file_name,
-        'SourceFile' =>  __DIR__ .'/images/'.$file_name,
-    ]);
-// Echo Any Error Messages
-} catch (S3Exception $e) {
-    echo "An Error Occured With Image Upload:" .  $e->getMessage() . "\n";
-};
+// // Use S3 client to upload image stored in images folder to the S3 Bucket
+//     $result = $s3Client->putObject([
+//         'Bucket' => "crudappbucket",
+//         'Body'   => "this is the body!",
+//         'Key' =>  $file_name,
+//         'SourceFile' =>  __DIR__ .'/images/'.$file_name,
+//     ]);
+// // Echo Any Error Messages
+// } catch (S3Exception $e) {
+//     echo "An Error Occured With Image Upload:" .  $e->getMessage() . "\n";
+// };
 }
 };
 
@@ -94,27 +94,27 @@ $s3Client = $sdk->createS3();
 // Change the current uploaded to the previous file name
 // Upload the newly named file
 
-if (isset($_FILES) ){ 
-    // Verify the correct extensions are used
-    $extensions = array("jpeg", "jpg", "png");
-    $explode = explode('.', $file_name);
-    $file_ext = strtolower(end($explode));
-    $file_new_name = $previous_file_name;
-    if(in_array($file_ext,$extensions) === false) {
-        $errors[] = "File extension is not allowed";
-    }
-    // If no Errors exist, move the file to the images directory
-    if(empty($errors) == true) {
-        move_uploaded_file($file_tmp, __DIR__ .'/images/'.$file_new_name);
-                // Upload the file to the bucket
-                updateS3Object($file_new_name);
-        echo "Image Uploaded Successfully";
-        header("Location: .?action=show_recipes");
+// if (isset($_FILES) ){ 
+//     // Verify the correct extensions are used
+//     $extensions = array("jpeg", "jpg", "png");
+//     $explode = explode('.', $file_name);
+//     $file_ext = strtolower(end($explode));
+//     $file_new_name = $previous_file_name;
+//     if(in_array($file_ext,$extensions) === false) {
+//         $errors[] = "File extension is not allowed";
+//     }
+//     // If no Errors exist, move the file to the images directory
+//     if(empty($errors) == true) {
+//         move_uploaded_file($file_tmp, __DIR__ .'/images/'.$file_new_name);
+//                 // Upload the file to the bucket
+//                 updateS3Object($file_new_name);
+//         echo "Image Uploaded Successfully";
+//         header("Location: .?action=show_recipes");
 
 
-    } else {
-        // Print Errors if any exist
-        print_r($errors);
-    }
-};
+//     } else {
+//         // Print Errors if any exist
+//         print_r($errors);
+//     }
+// };
 ?>
