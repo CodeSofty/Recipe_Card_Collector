@@ -74,7 +74,7 @@ This page display a single recipe's information
 ### CRUD Functionality
 - Users can CREATE by uploading data/images to the app.
 - Users can READ when a recipe is displayed on the screen on either the Recipe Card page, or Recipe page.
-- Users can UPDATE when a recipe is updated by clicking on the 3 dots on a recipe card, and then clicking on the pencil symbol, which brings up the form and image data to update. *
+- Users can UPDATE when a recipe is updated by clicking on the 3 dots on a recipe card, and then clicking on the pencil symbol, which brings up the form and image data to update.
 - Users can DELETE when a recipe is deleted by clicking on the 3 dots on a recipe card, and then clicking on the trash can symbol, which removes the data from the database, and image in the AWS S3 Bucket.
 
 ## * Room For Improvement:
@@ -86,5 +86,5 @@ This page display a single recipe's information
 at the time of updating.
 - Currently there is a file upload limit, which will not upload any files largers than 1MB, I am working on improving this.
 
-## As of 7/25/22 this app is finished, besides minor adjustments that may be made.
+### As of 7/25/22 this app is finished, besides minor adjustments that may be made.
 
