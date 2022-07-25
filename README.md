@@ -1,5 +1,5 @@
 # Recipe Card Collector 
-A CRUD app for users to upload their own recipes and images.
+A CRUD app for users to upload their own recipes and images, with its own API to control CRUD functions.
 
 ## Why Did You Build This?
 
