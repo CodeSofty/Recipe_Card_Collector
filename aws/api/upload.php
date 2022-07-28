@@ -15,10 +15,7 @@ if(!$img_id){
 // Get file upload details 
 if (isset($_FILES) ){ 
     $file_name = $_FILES['image']['name'];
-    $file_size = $_FILES['image']['size'];
     $file_tmp = $_FILES['image']['tmp_name'];
-    $file_type = $_FILES['image']['type'];
-    $temp_source = __DIR__ . "/images/".$file_name;
 
 
     // Verify the correct extensions are used
@@ -33,7 +30,6 @@ if (isset($_FILES) ){
     if(empty($message) == true) {
         move_uploaded_file($file_tmp,  __DIR__ . "/images/".$file_new_name);
                 // Upload the file to the bucket
-                echo ( __DIR__ . "/images/".$file_new_name);
                 uploadFiletoS3($file_new_name);
         echo "Congratulations Image Uploaded Successfully";
         header("Location: .?action=show_recipes");
@@ -46,7 +42,6 @@ function uploadFiletoS3($file_name){
 
     if(isset($file_name)) {
 
-echo "<script type='text/javascript'>alert('This File is Not Set');</script>"; 
 // Shared S3 Configuration
 try {
     $sharedConfig = [
