@@ -1,7 +1,5 @@
 <?php
 
-// ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_reporting(E_ALL);
-ini_get('upload_max_filesize');
 
 
 //Require Models (database, API, and class files)
@@ -190,7 +188,6 @@ switch($action) {
 // Load the Update View and Pre-fill Form Values
     case "update":
         if ($id) {
-            echo $id;
             $recipes->id = $id;
             $recipes->read_single();
             $title =  $recipes->title;
