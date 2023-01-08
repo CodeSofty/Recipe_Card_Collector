@@ -12,10 +12,8 @@ class Database {
         //DB Params
         private $host = 'crud-database-do-user-13269986-0.b.db.ondigitalocean.com';
         private $db_name = 'defaultdb';
-        private $username = 'doadmin';
+        private $username = 'root';
         private $pass =  'AVNS_o0g1qS2iFRLoy9UbqPd';
-        private $port = '25060';
-        private $sslmode = 'REQUIRED';
         private $conn;
     
 
