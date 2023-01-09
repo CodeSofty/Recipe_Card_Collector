@@ -14,7 +14,7 @@ class Database {
         private $db_name = 'defaultdb';
         private $username = 'doadmin';
         private $pass =  'AVNS_o0g1qS2iFRLoy9UbqPd';
-        private $port = '8080';
+        private $port = '25060';
         private $conn;
     
 
@@ -25,7 +25,7 @@ class Database {
 
         try
     {
-        $this->conn = new PDO('mysql:host=' . $this->host . ';port=' . $this-port . ';dbname=' . $this->db_name,
+        $this->conn = new PDO('mysql:host=' . $this->host . ';port=' . $this->port . ';dbname=' . $this->db_name,
         $this->username, $this->pass);
         $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
