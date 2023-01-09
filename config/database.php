@@ -14,7 +14,7 @@ class Database {
         private $db_name = 'defaultdb';
         private $username = 'doadmin';
         private $pass =  'AVNS_o0g1qS2iFRLoy9UbqPd';
-        private $port = '25060';
+        private $port = '8080';
         private $conn;
     
 
