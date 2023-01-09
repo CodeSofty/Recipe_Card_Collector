@@ -10,11 +10,11 @@ class Database {
     // private $conn;
 
         //DB Params
-        private $host = 'crud-database-do-user-13269986-0.b.db.ondigitalocean.com';
-        private $db_name = 'defaultdb';
-        private $username = 'doadmin';
-        private $pass =  'AVNS_o0g1qS2iFRLoy9UbqPd';
-        private $conn;
+        // private $host = 'crud-database-do-user-13269986-0.b.db.ondigitalocean.com';
+        // private $db_name = 'defaultdb';
+        // private $username = 'doadmin';
+        // private $pass =  'AVNS_o0g1qS2iFRLoy9UbqPd';
+        // private $conn;
     
 
     //DB Connect
